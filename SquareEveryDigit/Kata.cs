@@ -4,6 +4,6 @@ public class Kata
 {
     public static int SquareDigits(int n)
     {
-        return 0;
+        return n*n;
     }
 }
