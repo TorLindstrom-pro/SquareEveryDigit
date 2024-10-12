@@ -23,13 +23,16 @@ public class SquareDigitsTests
         Assert.That(result, Is.EqualTo(0));
     }
     
-    [Test]
-    public void EachDigitInNumber_IsSquared()
+    [Theory]
+    [TestCase(123, 149)]
+    [TestCase(765, 493625)]
+    [TestCase(9119, 811181)]
+    public void EachDigitInNumber_IsSquared(int n, int expectedResult)
     {
         // Act
-        var result = Kata.SquareDigits(123);
+        var result = Kata.SquareDigits(n);
 
         // Assert
-        Assert.That(result, Is.EqualTo(149));
+        Assert.That(result, Is.EqualTo(expectedResult));
     }
 }
